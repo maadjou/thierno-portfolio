@@ -1,0 +1,26 @@
+from zipfile import ZipFile
+from io import BytesIO
+
+# Contenu du fichier index.html
+html_content = """ 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thierno Maadjou BAH - Créatif numérique</title>
+  <style>
+    /* styles ici (raccourcis pour lisibilité) */
+  </style>
+</head>
+<body>
+  <!-- contenu ici -->
+</body>
+</html>
+"""  # Remplacez cette ligne par le contenu complet fourni précédemment si nécessaire
+
+# Créer le fichier ZIP
+with ZipFile("thierno-portfolio.zip", "w") as zip_file:
+    zip_file.writestr("index.html", html_content)
+
+print("Fichier ZIP créé : thierno-portfolio.zip")
